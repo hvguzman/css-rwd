@@ -18,6 +18,10 @@ main {
 
 .banner {
 	background-color: lightyellow;
+	/*background-size: cover;*/
+	/*background-image: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg);*/
+	/*background-repeat: no-repeat;*/
+	/*background-attachment:*/
 	height: 700px;
 	position: relative;
 }
@@ -29,7 +33,9 @@ main {
 
 .services {
 	background-color: midnightblue;
-	height: 300px
+	/*height: 300px*/
+	min-height: 300px;
+	color: lightgrey;
 }
 
 .projects {
@@ -39,12 +45,14 @@ main {
 
 .gallery {
 	background-color: orange;
-	height: 400px
+	/*height: 400px*/
+	min-height: 400px
 }
 
 footer {
 	background-color: green;
-	height: 50px;
+	/*height: 50px;*/
+	min-height: 50px;
 }
 
 nav,
@@ -86,3 +94,90 @@ ul > li > a {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+.column {
+	border: 1px solid white;
+	width: 31%;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding: 20px;
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+} /*Don't forget to clear to the html class!*/
+
+img[alt*="Services"] { /* img is inherently an inline element */
+	border: 1px solid #fff;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+} /*the "*" tells the css parser na dapat may word na may keyword na "Services" yung alt*/
+
+img[alt*="Services"] ~ p { /* ~ means sibling; our code is targeting all the paragraphs in the img segment */
+	overflow: hidden;
+
+}
+
+img[alt*="Services"] ~ h3 {
+	margin-bottom: 10px;
+}
+
+.gallery > .column { /* > means that the targeted element is a child of the first mentioned element */
+	width: 23%;
+	margin: 0 1%;
+}
+
+img[alt*="Gallery"] { /* img is inherently an inline element */
+	border: 1px solid #fff;
+	width: 100%;
+	height: 100px;
+	display: block;
+	float: left;
+	margin-right: 10px;
+} /*the "*" tells the css parser na dapat may word na may keyword na "Gallery" yung alt*/
+
+img[alt*="Gallery"] ~ p { /* ~ means sibling; our code is targeting all the paragraphs in the img segment */
+	overflow: hidden;
+
+}
+
+img[alt*="Gallery"] ~ h3 {
+	margin-bottom: 10px;
+}
+
+.gallery > .column { /* > means that the targeted element is a child of the first mentioned element */
+	width: 23%;
+	margin: 0 1%;
+	border-color: black;
+}
+
+img[alt*="Social"] {
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+div.contact { /* Be careful to not put a space. If you wrote div. contact, then it would target all .contacts under a div, not just div.contact.*/
+	float: right;
+}
+
+div.logo {
+	margin-bottom: 20px;
+}
+
+/* TIPS!!!!
+
+1. Make things work.
+2. Make things fast.
+3. Make things right.
+
+*/
