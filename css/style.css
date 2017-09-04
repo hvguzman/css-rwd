@@ -1,0 +1,88 @@
+* {
+	margin:0;
+	padding: 0;
+	box-sizing: border-box; /* to avoid overflows */
+}
+
+nav {
+	background-color: lightgreen;
+	height: 100%; /*If this is commented out, the height depends on the content of the section*/
+	width: 200px;
+	position: fixed;
+}
+
+main {
+	background-color: lightgrey;
+	margin-left: 200px;
+}
+
+.banner {
+	background-color: lightyellow;
+	height: 700px;
+	position: relative;
+}
+
+.about {
+	background-color: indianred;
+	height: 700px;
+}
+
+.services {
+	background-color: midnightblue;
+	height: 300px
+}
+
+.projects {
+	background-color: lightblue;
+	height: 300px
+}
+
+.gallery {
+	background-color: orange;
+	height: 400px
+}
+
+footer {
+	background-color: green;
+	height: 50px;
+}
+
+nav,
+.banner,
+.about,
+.services,
+.projects,
+.gallery,
+footer {
+	padding: 30px;
+}
+
+.logo {
+	width: 140px;
+	height: 140px;
+	background-color: lightgrey;
+	margin: 0 auto; /* centers the element */
+}
+
+ul > li {
+	list-style: none;
+	background-color: white;
+	margin-bottom: 2px;
+	line-height: 48px;
+	text-align: center;
+}
+
+ul > li > a {
+	text-decoration: none;
+}
+
+.box {
+	border: 5px solid grey;
+	text-align: center;
+	width: 40%;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
